@@ -62,9 +62,9 @@
 			children = (
 				488BCD732416F9B4008992BE /* AppDelegate.swift */,
 				488BCD752416F9B4008992BE /* SceneDelegate.swift */,
-				48F7DF9E2417C3A7004A3966 /* CardView.swift */,
-				48F7DFA02417D0FC004A3966 /* DetailView.swift */,
 				488BCD772416F9B4008992BE /* ContentView.swift */,
+				48F7DFA02417D0FC004A3966 /* DetailView.swift */,
+				48F7DF9E2417C3A7004A3966 /* CardView.swift */,
 				488BCD792416F9B6008992BE /* Assets.xcassets */,
 				488BCD7E2416F9B6008992BE /* LaunchScreen.storyboard */,
 				488BCD812416F9B6008992BE /* Info.plist */,

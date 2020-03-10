@@ -14,6 +14,7 @@ struct DetailView: View {
             LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             ScrollView{
+                Spacer()
                 VStack{
                     Image("m7")
                         .resizable()

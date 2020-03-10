@@ -19,6 +19,7 @@ struct CardView: View {
         VStack(alignment: .center){
             
             Image(name)
+                .renderingMode(.original)
                 .resizable()
                 .padding(0.0)
                 .cornerRadius(10.0)

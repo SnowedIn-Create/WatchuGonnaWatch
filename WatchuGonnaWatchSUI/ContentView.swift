@@ -14,6 +14,9 @@ struct ContentView: View {
     @State var titles = ["1917", "Black Widow", "Knives Out"]
     @State var genres = ["War", "Action", "Comedy"]
     @State var directors = ["Abc", "Cba", "Bca"]
+
+    @State var writtenText = ""
+    //@State var searchBoxActive = TextField<"">
     
     var body: some View {
         
@@ -34,38 +37,62 @@ struct ContentView: View {
                         
                         Spacer()
                         Button(action: {
-                            
+                            if self.writtenText == "Black Widow" {
+                                self.titles[0] = "Black Widow"
+                                self.names[0] = "bwidow"
+                            }
+                            else if self.writtenText == "" {
+                                self.titles[0] = "1917"
+                                self.names[0] = "1917"
+                            }
                         }) {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.black)
-                            Spacer()
+                            HStack{
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundColor(.black)
+                                TextField("Search", text : $writtenText)
+                                   
+                                Spacer()
+                            }
+                            
                         }
                     }
                     
                     
-                    HStack(spacing: 15.0) {
+                    VStack(spacing: 15.0) {
                         Spacer()
                         
-                        VStack{
+                        HStack(alignment: .center, spacing: 15.0){
                             CardView(name: $names[0], title: $titles[0], genre: $genres[0], director: $directors[0])
-                            CardView2()
-                            CardView3()
+                            
+                            CardView(name: $names[1], title: $titles[1], genre: $genres[1], director: $directors[1])
+                            
+                            
+                            
                             
                         }
-                        VStack{
-                            CardView2()
-                            CardView(name: $names[0], title: $titles[0], genre: $genres[0], director: $directors[0])
-                            CardView3()
+                        
+                        HStack(alignment: .center, spacing: 15.0){
+                            CardView(name: $names[1], title: $titles[1], genre: $genres[1], director: $directors[1])
+                            
+                            CardView(name: $names[2], title: $titles[2], genre: $genres[2], director: $directors[2])
+                            
                             
                         }
-                    Spacer()
+                        HStack(alignment: .center, spacing: 15.0){
+                            CardView(name: $names[1], title: $titles[1], genre: $genres[1], director: $directors[1])
+                            
+                            CardView(name: $names[2], title: $titles[2], genre: $genres[2], director: $directors[2])
+                            
+                            
+                        }
                     }
-
+                    
                     
                     
                     
                 }
             }
+            .padding(.horizontal)
         }
     }
     

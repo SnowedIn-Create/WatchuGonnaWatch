@@ -62,7 +62,7 @@ struct ContentView: View {
                         Spacer()
                         
                         HStack(alignment: .center, spacing: 15.0){
-                            
+                            //TODO: - Configure Button Functionality and allow the modal view to change according to selection
                             Button(action: {
                                 self.showModal = true
                                 
